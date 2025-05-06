@@ -31,14 +31,17 @@ module "delegate" {
 
   account_id = "ucHySz2jQKKWQweZdXyCog"
   delegate_token = "NTRhYTY0Mjg3NThkNjBiNjMzNzhjOGQyNjEwOTQyZjY="
-  delegate_name = "delegate-sukanya"
+  delegate_name = "delegate1-sukanya"
   deploy_mode = "KUBERNETES"
   namespace = "harness-delegate-ng"
   manager_endpoint = "https://app.harness.io"
   delegate_image = "us-docker.pkg.dev/gar-prod-setup/harness-public/harness/delegate:25.04.85701"
   replicas = 1
   upgrader_enabled = true
-
-  depends_on = [google_container_cluster.primary]
 }
 
+provider "helm" {
+  kubernetes {
+    config_path = "~/.kube/config"
+  }
+}
