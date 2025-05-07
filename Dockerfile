@@ -2,7 +2,7 @@
 FROM python:3.9-alpine
 
 # Install system dependencies for Python packages
-RUN apk add --no-cache gcc musl-dev libffi-dev
+RUN apk add curl git unzip wget zip
 
 # Set working directory
 WORKDIR /app
