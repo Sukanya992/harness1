@@ -1,7 +1,8 @@
-FROM python:3.9-slim
+# Use a minimal Alpine image for Python
+FROM python:3.9-alpine
 
-# Update and upgrade system packages for security patches (only for Debian-based images)
-RUN apt-get update && apt-get upgrade -y
+# Install system dependencies for Python packages
+RUN apk add --no-cache gcc musl-dev libffi-dev
 
 # Set working directory
 WORKDIR /app
@@ -17,4 +18,3 @@ EXPOSE 5000
 
 # Run the app
 CMD ["python", "app.py"]
-
