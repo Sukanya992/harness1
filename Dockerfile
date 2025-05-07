@@ -11,7 +11,7 @@ WORKDIR /app
 COPY app.py .
 
 # Install Flask and upgrade setuptools
-RUN pip install --upgrade setuptools && pip install flask
+RUN pip install --upgrade setuptools && pip install requirements.txt
 
 # Expose the port the app runs on
 EXPOSE 5000
