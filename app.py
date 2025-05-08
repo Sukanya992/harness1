@@ -1,6 +1,11 @@
 from flask import Flask
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
+
+# Disable CSRF protection
+csrf = CSRFProtect(app)
+csrf._disable_on_check()
 
 @app.route("/")
 def hello():
