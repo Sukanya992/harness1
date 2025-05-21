@@ -1,5 +1,5 @@
 variable "cluster_name" {
-    default = "cluster-harness-1"
+    default = "cluster-harness-2"
   
 }
 variable "region" {
