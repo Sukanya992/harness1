@@ -3,7 +3,7 @@ variable "cluster_name" {
   
 }
 variable "region" {
-    default = "us-west1-a"
+    default = "us-central1-c"
   
 }
 variable "node_count" {
@@ -15,5 +15,5 @@ variable "node_count" {
 variable "node_machine_type" {
   description = "The type of machine to use for nodes in the Kubernetes cluster"
   type        = string
-  default     = "e2-standard-2"  // Adjust based on the required machine type
+  default     = "e2-standard-4"  // Adjust based on the required machine type
 }
