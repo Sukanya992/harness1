@@ -1,2 +1,1 @@
-flask
-flask_wtf
+Flask==2.2.3
