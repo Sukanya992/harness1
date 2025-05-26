@@ -1,2 +1,1 @@
 Flask==2.2.5
-flask-wtf==1.1.1  # Only include if you're using CSRF
