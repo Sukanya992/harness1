@@ -6,30 +6,43 @@ app = Flask(__name__)
 def hello():
     return """
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
-        <title>Harness App</title>
+        <meta charset="UTF-8">
+        <title>Welcome | Harness App</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                text-align: center;
-                padding-top: 100px;
+                margin: 0;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(to right, #1f4037, #99f2c8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: #fff;
             }
-            .message {
-                display: inline-block;
-                background-color: #ffffff;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                color: #333;
+            .container {
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 40px;
+                border-radius: 15px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+                text-align: center;
+            }
+            h1 {
+                margin-bottom: 10px;
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+                margin-top: 0;
             }
         </style>
     </head>
     <body>
-        <div class="message">
-            <h1>Hello from <span style="color:#007bff;">Harness</span>!</h1>
-            <p>This is a Blue HTML response from Harness.</p>
+        <div class="container">
+            <h1>🚀 Welcome to Harness!</h1>
+            <p>This is a <strong>Green Deployment</strong> served by Kubernetes Ingress.</p>
         </div>
     </body>
     </html>
@@ -37,3 +50,4 @@ def hello():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
