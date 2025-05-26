@@ -29,7 +29,7 @@ def hello():
     <body>
         <div class="message">
             <h1>Hello from <span style="color:#007bff;">Harness</span>!</h1>
-            <p>This is a styled HTML response from your Flask app.</p>
+            <p>This is a Blue HTML response from Harness.</p>
         </div>
     </body>
     </html>
